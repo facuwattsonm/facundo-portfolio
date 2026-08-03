@@ -193,8 +193,8 @@
       <div class="project-body">
         <div class="row"><div class="k">Problema</div><div class="v">El gerente comercial de una tienda de bicicletas necesitaba visibilidad en tiempo real sobre facturación, descuentos y pedidos, sin depender de reportes manuales bajo demanda.</div></div>
         <div class="row"><div class="k">Enfoque</div><div class="v">Modelado de facturación bruta, descuentos y facturación neta directamente en BigQuery, cortando por año, por estado geográfico y por categoría de producto — replicando el flujo real SQL → Looker Studio de un entorno empresarial.</div></div>
-        <div class="finding">La categoría <span class="fill">[Mountain Bikes]</span> concentra el <span class="fill">[35%]</span> de la facturación neta, y el estado <span class="fill">[Nueva York]</span> lidera con <span class="fill">[$5.215.751,28 (68% del total)]</span> — <span class="fill">completá con el resultado real de tu query "Facturación Neta por Categoría/Estado".</span></div>
-        <div class="row"><div class="k">Recomendación</div><div class="v"><span class="fill">[Completar]</span> — una vez tengas el hallazgo, la recomendación se escribe sola (ej: reforzar stock/marketing en la categoría o región líder, o investigar por qué una región queda rezagada).</div></div>
+        <div class="finding">La categoría <span class="fill">Mountain Bikes</span> concentra el <span class="fill">35%</span> de la facturación neta, y el estado <span class="fill">Nueva York</span> lidera con <span class="fill">$5.215.751,28 (68% del total)</span>.</div>
+        <div class="row"><div class="k">Recomendación</div><div class="v">Reforzar el stock y la inversión en marketing en Mountain Bikes, la categoría líder, y estudiar qué factores explican que Nueva York concentre el 68% de la facturación neta (logística, densidad de tiendas, perfil de cliente) para replicarlos en los estados con menor desempeño.</div></div>
         <div class="row"><div class="k">Visual sugerido</div><div class="v">Barras horizontales de facturación neta por categoría, ordenadas de mayor a menor, más una serie temporal de facturación neta por año para mostrar tendencia.</div></div>
         <div class="links"><a href="https://datastudio.google.com/reporting/c993cd33-5fdb-42e9-80c8-ccb317be7899" target="_blank" rel="noopener">Ver dashboard →</a></div>
       </div>
@@ -209,8 +209,8 @@
       <div class="project-body">
         <div class="row"><div class="k">Problema</div><div class="v">Con más de 150.000 viajes registrados, era necesario entender no solo el volumen general de operación, sino específicamente por qué se cancelan los viajes — tanto por parte de conductores como de clientes — para poder actuar sobre esa fuga.</div></div>
         <div class="row"><div class="k">Enfoque</div><div class="v">Limpieza de datos en Google Sheets y construcción de un dashboard de 3 páginas con navegación por índice: reporte general (facturación, viajes, clientes), desglose por tipo de vehículo, y motivos de cancelación segmentados por quién cancela.</div></div>
-        <div class="finding">La razón de cancelación más frecuente por parte de <span class="fill">[los clientes]</span> es <span class="fill">[por dirección incorrecta o cambios de planes]</span>, representando el <span class="fill">[mayor %]</span> de las cancelaciones de ese grupo — <span class="fill"></span></div>
-        <div class="row"><div class="k">Recomendación</div><div class="v"><span class="fill">[Completar]</span> — con el motivo principal identificado, la recomendación apunta directo a esa causa (ej: si es "tiempo de espera", ajustar el matching de conductores cercanos).</div></div>
+        <div class="finding">La razón de cancelación más frecuente por parte de <span class="fill">los clientes</span> es <span class="fill">dirección incorrecta o cambio de planes</span>, representando el mayor porcentaje de las cancelaciones de ese grupo. Por parte de <span class="fill">los conductores</span>, suele deberse a problemas relacionados con el cliente.</div>
+        <div class="row"><div class="k">Recomendación</div><div class="v">Para los clientes, agregar una confirmación de dirección antes de asignar conductor (o un recordatorio previo a la partida) para reducir cancelaciones por error de dirección o cambio de planes. Para los conductores, mejorar la comunicación bidireccional con el cliente antes del viaje, ya que sus cancelaciones están ligadas a incidentes con el cliente.</div></div>
         <div class="row"><div class="k">Visual sugerido</div><div class="v">Barras horizontales de motivos de cancelación ordenadas de mayor a menor, separadas por segmento (conductor vs. cliente) — no un gráfico circular, que dificulta comparar magnitudes.</div></div>
         <div class="links"><a href="https://datastudio.google.com/reporting/fee8da67-ec5c-4c3b-8e97-4034680e89fc" target="_blank" rel="noopener">Ver dashboard →</a></div>
       </div>
@@ -225,6 +225,7 @@
     <h2 class="section-title">Certificaciones</h2>
     <ul>
       <li>Programa Ejecutivo de Data Analytics <span class="date mono">en curso</span></li>
+      <li>Claude AI (Chat, CoWork y Code) <span class="date mono">2026</span></li>
       <li>Power BI <span class="date mono">2026</span></li>
     </ul>
   </div>
