@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facundo Wattson Montero — Portfolio de Datos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14181F;
+    --paper:#F6F4EF;
+    --amber:#C98A2C;
+    --slate:#5B6472;
+    --line:#D8D3C7;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3{font-family:'Fraunces', serif;font-weight:600;letter-spacing:-0.01em;margin:0;}
+  .mono{font-family:'JetBrains Mono', monospace;}
+  a{color:inherit;}
+
+  header.hero{padding:96px 0 64px;border-bottom:1px solid var(--line);}
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    color:var(--amber);
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{content:"> ";}
+  h1.name{font-size:clamp(36px,6vw,56px);line-height:1.05;}
+  .role{font-size:19px;color:var(--slate);margin-top:14px;max-width:60ch;}
+  .thread{
+    margin-top:28px;
+    padding:16px 20px;
+    border-left:3px solid var(--amber);
+    background:var(--card);
+    font-size:15px;
+    color:var(--ink);
+  }
+  .thread .mono{color:var(--slate);font-size:13px;display:block;margin-bottom:6px;}
+  .contact-row{margin-top:32px;display:flex;gap:20px;flex-wrap:wrap;}
+  .contact-row a{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    padding:8px 14px;
+    border:1px solid var(--ink);
+    text-decoration:none;
+    transition:background .15s, color .15s;
+  }
+  .contact-row a:hover{background:var(--ink);color:var(--paper);}
+
+  section{padding:64px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .section-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--slate);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin-bottom:8px;
+  }
+  h2.section-title{font-size:30px;margin-bottom:36px;}
+
+  .tools{display:flex;flex-wrap:wrap;gap:10px;}
+  .tool-tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    padding:7px 12px;
+    background:var(--card);
+    border:1px solid var(--line);
+  }
+
+  .project{
+    background:var(--card);
+    border:1px solid var(--line);
+    margin-bottom:28px;
+  }
+  .project-head{
+    padding:24px 28px 18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:8px;
+    border-bottom:1px solid var(--line);
+  }
+  .project-head h3{font-size:22px;}
+  .project-stack{font-family:'JetBrains Mono', monospace;font-size:12px;color:var(--slate);}
+  .project-body{padding:22px 28px 28px;}
+  .row{display:grid;grid-template-columns:120px 1fr;gap:6px 18px;margin-bottom:14px;}
+  .row:last-child{margin-bottom:0;}
+  .row .k{font-family:'JetBrains Mono', monospace;font-size:11px;color:var(--amber);text-transform:uppercase;letter-spacing:.04em;padding-top:2px;}
+  .row .v{font-size:15px;}
+  .finding{
+    background:var(--ink);
+    color:var(--paper);
+    padding:16px 18px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:14px;
+    margin:14px 0;
+    line-height:1.6;
+  }
+  .finding::before{content:"SELECT insight FROM proyecto;";display:block;color:var(--amber);font-size:11px;margin-bottom:8px;}
+  .fill{color:var(--amber);font-weight:600;}
+  .links{margin-top:14px;font-size:13px;}
+  .links a{text-decoration:underline;text-decoration-color:var(--line);}
+
+  .certs ul{list-style:none;padding:0;margin:0;}
+  .certs li{
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    font-size:15px;
+  }
+  .certs li:last-child{border-bottom:none;}
+  .certs .date{font-family:'JetBrains Mono', monospace;font-size:12px;color:var(--slate);}
+
+  footer{padding:48px 0 80px;text-align:center;color:var(--slate);font-size:14px;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">valencia, españa · analista de datos jr</div>
+    <h1 class="name">Facundo Wattson Montero</h1>
+    <p class="role">Analista de Datos Jr. formado en SQL, Python, Power BI y Looker Studio, con especialización en curso hacia Marketing Analytics.</p>
+    <div class="thread">
+      <span class="mono">de dónde vengo</span>
+      7 años gestionando stock, pedidos e inventario en logística y atención al cliente me enseñaron a leer el dato desde el problema de negocio real, no desde la planilla. Hoy aplico esa lógica al análisis de datos.
+    </div>
+    <div class="contact-row">
+      <a href="mailto:facuwattson96@gmail.com">Email</a>
+      <a href="http://www.linkedin.com/in/facundo-wattson-montero" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<section id="herramientas">
+  <div class="wrap">
+    <div class="section-label">Stack</div>
+    <h2 class="section-title">Herramientas Técnicas</h2>
+    <div class="tools">
+      <span class="tool-tag">SQL (SQLite, BigQuery)</span>
+      <span class="tool-tag">Python</span>
+      <span class="tool-tag">Google Sheets / Excel</span>
+      <span class="tool-tag">Looker Studio</span>
+      <span class="tool-tag">Power BI</span>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="wrap">
+    <div class="section-label">Case Studies</div>
+    <h2 class="section-title">Proyectos Destacados</h2>
+
+    <!-- PROJECT 1: GYM -->
+    <div class="project">
+      <div class="project-head">
+        <h3>Perfil de Miembro y Retención — Gimnasio</h3>
+        <span class="project-stack">Python · SQL/SQLite · Looker Studio</span>
+      </div>
+      <div class="project-body">
+        <div class="row"><div class="k">Problema</div><div class="v">Un gimnasio con 973 socios activos no tenía forma de identificar, con datos, qué caracteriza a un miembro en riesgo de abandonar frente a uno consistente — sin ese perfil, cualquier estrategia de retención era una apuesta a ciegas.</div></div>
+        <div class="row"><div class="k">Enfoque</div><div class="v">Limpieza y enriquecimiento de datos en Python, modelado con queries SQL sobre SQLite, y segmentación de socios por frecuencia semanal y nivel de experiencia (principiante / intermedio / avanzado) para aislar qué variable explica mejor la consistencia de entrenamiento.</div></div>
+        <div class="finding">1 de cada 5 socios (20.2%, 197 personas) cae en "alto riesgo": entrena ≤2 días/semana y es principiante. Su frecuencia semanal sube de 2.48 a 4.53 días a medida que gana experiencia — mucho más determinante que el tipo de entrenamiento o el género.</div>
+        <div class="row"><div class="k">Recomendación</div><div class="v">No cambiar la oferta de clases: acompañar activamente al socio nuevo/principiante en sus primeras semanas (frecuencia y duración de sesión), que es la ventana crítica donde se decide si se retiene o se pierde al socio.</div></div>
+        <div class="row"><div class="k">Visual sugerido</div><div class="v">Barras horizontales de frecuencia semanal por nivel de experiencia (principiante → avanzado), ordenadas de menor a mayor — deja ver la progresión de un vistazo, mejor que un gráfico de torta por segmento.</div></div>
+        <div class="links"><a href="https://datastudio.google.com/reporting/c3436895-b7ef-4c5c-8ec4-4afff76760dc" target="_blank" rel="noopener">Ver dashboard →</a></div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: BIKE SHOP -->
+    <div class="project">
+      <div class="project-head">
+        <h3>Tablero Comercial — Tienda de Bicicletas</h3>
+        <span class="project-stack">BigQuery · SQL · Looker Studio</span>
+      </div>
+      <div class="project-body">
+        <div class="row"><div class="k">Problema</div><div class="v">El gerente comercial de una tienda de bicicletas necesitaba visibilidad en tiempo real sobre facturación, descuentos y pedidos, sin depender de reportes manuales bajo demanda.</div></div>
+        <div class="row"><div class="k">Enfoque</div><div class="v">Modelado de facturación bruta, descuentos y facturación neta directamente en BigQuery, cortando por año, por estado geográfico y por categoría de producto — replicando el flujo real SQL → Looker Studio de un entorno empresarial.</div></div>
+        <div class="finding">La categoría <span class="fill">Mountain Bikes</span> concentra el <span class="fill">35%</span> de la facturación neta, y el estado <span class="fill">Nueva York</span> lidera con <span class="fill">$5.215.751,28 (68% del total)</span>.</div>
+        <div class="row"><div class="k">Recomendación</div><div class="v">Reforzar el stock y la inversión en marketing en Mountain Bikes, la categoría líder, y estudiar qué factores explican que Nueva York concentre el 68% de la facturación neta (logística, densidad de tiendas, perfil de cliente) para replicarlos en los estados con menor desempeño.</div></div>
+        <div class="row"><div class="k">Visual sugerido</div><div class="v">Barras horizontales de facturación neta por categoría, ordenadas de mayor a menor, más una serie temporal de facturación neta por año para mostrar tendencia.</div></div>
+        <div class="links"><a href="https://datastudio.google.com/reporting/c993cd33-5fdb-42e9-80c8-ccb317be7899" target="_blank" rel="noopener">Ver dashboard →</a></div>
+      </div>
+    </div>
+
+    <!-- PROJECT 3: UBER INDIA -->
+    <div class="project">
+      <div class="project-head">
+        <h3>Reporte General — Uber en India</h3>
+        <span class="project-stack">Google Sheets · Looker Studio</span>
+      </div>
+      <div class="project-body">
+        <div class="row"><div class="k">Problema</div><div class="v">Con más de 150.000 viajes registrados, era necesario entender no solo el volumen general de operación, sino específicamente por qué se cancelan los viajes — tanto por parte de conductores como de clientes — para poder actuar sobre esa fuga.</div></div>
+        <div class="row"><div class="k">Enfoque</div><div class="v">Limpieza de datos en Google Sheets y construcción de un dashboard de 3 páginas con navegación por índice: reporte general (facturación, viajes, clientes), desglose por tipo de vehículo, y motivos de cancelación segmentados por quién cancela.</div></div>
+        <div class="finding">La razón de cancelación más frecuente por parte de <span class="fill">los clientes</span> es <span class="fill">dirección incorrecta o cambio de planes</span>, representando el mayor porcentaje de las cancelaciones de ese grupo. Por parte de <span class="fill">los conductores</span>, suele deberse a problemas relacionados con el cliente.</div>
+        <div class="row"><div class="k">Recomendación</div><div class="v">Para los clientes, agregar una confirmación de dirección antes de asignar conductor (o un recordatorio previo a la partida) para reducir cancelaciones por error de dirección o cambio de planes. Para los conductores, mejorar la comunicación bidireccional con el cliente antes del viaje, ya que sus cancelaciones están ligadas a incidentes con el cliente.</div></div>
+        <div class="row"><div class="k">Visual sugerido</div><div class="v">Barras horizontales de motivos de cancelación ordenadas de mayor a menor, separadas por segmento (conductor vs. cliente) — no un gráfico circular, que dificulta comparar magnitudes.</div></div>
+        <div class="links"><a href="https://datastudio.google.com/reporting/fee8da67-ec5c-4c3b-8e97-4034680e89fc" target="_blank" rel="noopener">Ver dashboard →</a></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="certificaciones" class="certs">
+  <div class="wrap">
+    <div class="section-label">Formación</div>
+    <h2 class="section-title">Certificaciones</h2>
+    <ul>
+      <li>Programa Ejecutivo de Data Analytics <span class="date mono">en curso</span></li>
+      <li>Claude AI (Chat, CoWork y Code) <span class="date mono">2026</span></li>
+      <li>Power BI <span class="date mono">2026</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Facundo Wattson Montero — Valencia, España · <a href="mailto:facuwattson96@gmail.com">facuwattson96@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
